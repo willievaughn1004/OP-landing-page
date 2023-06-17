@@ -2,4 +2,32 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.hero {
+  height: 25%;
+  background-color: #1f2937;
+}
+
+.random-info {
+  height: 25%;
+}
+
+.quote {
+  height: 25%;
+  background-color: #e5e7eb;
+}
+
+.call-to-action {
+  height: 25%;
+}
+
+footer {
+  background-color: #1f2937;
 }/*# sourceMappingURL=styles.css.map */

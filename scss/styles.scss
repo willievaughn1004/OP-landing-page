@@ -1,5 +1,49 @@
+// Variables
+
+// colors
+$dark-background: #1f2937;
+$c-hero-main-text: #f9faf8;
+$c-hero-sec-text: #e5e7eb; // also for header link text
+// $c-header-logo: #f
+
+// Font-size
+$fs-hero-main-text: 4rem;
+$fs-hero-sec-text: 1.2rem; // also for header link text
+$fs-header-logo: 1.5rem;
+
+//Font-weight
+$fw-bolder: 700;
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.hero {
+  height: 25%;
+  background-color: $dark-background;
+}
+
+.random-info {
+  height: 25%;
+}
+
+.quote {
+  height: 25%;
+  background-color: $c-hero-sec-text;
+}
+
+.call-to-action {
+  height: 25%;
+}
+
+footer {
+  background-color: $dark-background;
 }
