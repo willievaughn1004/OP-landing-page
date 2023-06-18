@@ -1,15 +1,21 @@
 // Variables
 
-// colors
+// Colors
 $dark-background: #1f2937;
-$c-hero-main-text: #f9faf8;
-$c-hero-sec-text: #e5e7eb; // also for header link text
-// $c-header-logo: #f
+$blue: #3882F6;
+$main-text-color: #f9faf8;
+$sec-text-color: #e5e7eb;
+$quote-background: #E5e7eb;
+$info-text-color: #1f2937;
 
 // Font-size
-$fs-hero-main-text: 4rem;
-$fs-hero-sec-text: 1.2rem; // also for header link text
+$fs-hero-main-text: 3rem;
+$fs-sec-text: 1.2rem;
 $fs-header-logo: 1.5rem;
+$fs-info-text: 2.2rem; // also for quote
+
+// Padding 
+$padding: 5rem;
 
 //Font-weight
 $fw-bolder: 700;
@@ -29,12 +35,19 @@ body {
 header {
   display: grid;
   grid-template-columns: 25% 1fr 50%;
-  height: 7.5%;
   align-items: center;
 
+  height: 7.5%;
+  background-color: $dark-background;
+  padding: 0 $padding;
+  position: sticky;
+  
   h1 {
     grid-column: 1;
     justify-self: flex-start;
+
+    font-size: $fs-header-logo;
+    color: $main-text-color;
   }
 
   nav {
@@ -47,27 +60,92 @@ header {
 
       li {
         list-style-type: none;
+        color: $sec-text-color;
       }
     }
   }
 }
 
 .hero {
-  height: 25%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+
+  height: 50vh;
   background-color: $dark-background;
+  padding: 0 $padding;
+
+  .hero-text {
+    grid-column: 1;
+
+    h1 {
+      font-size: $fs-hero-main-text;
+      font-weight: $fw-bolder;
+      color: $main-text-color;
+    }
+
+    p {
+      color: $sec-text-color
+
+    }
+
+    button {
+      margin-top: 0.5rem;
+      padding: 0.2rem 1.4rem 0.2rem 1.4rem;
+      background-color: $blue;
+      border: none;
+      border-radius: .5rem;
+      color: $main-text-color;
+    }
+  }
+
+  .image-placeholder {
+    grid-column: 2;
+    justify-self: flex-end;
+
+    background-color: gray;
+    color: $sec-text-color;
+    padding: 5rem;
+  }
 }
 
 .random-info {
-  height: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  
+  height: 40vh;
+  
+  h1 {
+    font-size: $fs-info-text;
+    font-weight: $fw-bolder;
+  }
+
+  .random-images {
+    display: flex;
+    padding: 0 $padding;
+    text-align: center;
+
+    .random-image {
+
+      div {
+        border: 5px solid blue;
+        height: 100%;
+      }
+
+    }
+  }
+
 }
 
 .quote {
-  height: 25%;
-  background-color: $c-hero-sec-text;
+  height: 40vh;
+  background-color: $sec-text-color;
 }
 
 .call-to-action {
-  height: 25%;
+  height: 25vh;
 }
 
 footer {
