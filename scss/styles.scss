@@ -26,6 +26,32 @@ body {
   height: 100vh;
 }
 
+header {
+  display: grid;
+  grid-template-columns: 25% 1fr 50%;
+  height: 7.5%;
+  align-items: center;
+
+  h1 {
+    grid-column: 1;
+    justify-self: flex-start;
+  }
+
+  nav {
+    grid-column: 3;
+    justify-self: flex-end;
+
+    ul {
+      display: flex;
+      gap: 1rem;
+
+      li {
+        list-style-type: none;
+      }
+    }
+  }
+}
+
 .hero {
   height: 25%;
   background-color: $dark-background;
