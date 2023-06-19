@@ -7,17 +7,17 @@
 body {
   display: flex;
   flex-direction: column;
-  height: 100vh;
 }
 
 header {
   display: grid;
   grid-template-columns: 25% 1fr 50%;
   align-items: center;
-  height: 7.5%;
+  height: 5rem;
   background-color: #1f2937;
-  padding: 0 5rem;
-  position: sticky;
+  padding: 0 6.5rem;
+  position: fixed;
+  width: 100%;
 }
 header h1 {
   grid-column: 1;
@@ -42,9 +42,10 @@ header nav ul li {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  height: 50vh;
+  height: 45vh;
   background-color: #1f2937;
-  padding: 0 5rem;
+  padding: 0 6.5rem;
+  margin-top: 5rem;
 }
 .hero .hero-text {
   grid-column: 1;
@@ -70,7 +71,7 @@ header nav ul li {
   justify-self: flex-end;
   background-color: gray;
   color: #e5e7eb;
-  padding: 5rem;
+  padding: 4.5rem;
 }
 
 .random-info {
@@ -78,31 +79,69 @@ header nav ul li {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 40vh;
+  height: 55vh;
 }
 .random-info h1 {
   font-size: 2.2rem;
   font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 2rem;
 }
 .random-info .random-images {
   display: flex;
-  padding: 0 5rem;
+  padding: 0 6.5rem;
   text-align: center;
 }
+.random-info .random-images .random-image {
+  margin: 0 1rem 0 1rem;
+  height: 13.5rem;
+  width: 10rem;
+}
 .random-info .random-images .random-image div {
-  border: 5px solid blue;
-  height: 100%;
+  border: 5px solid #3882F6;
+  height: 10rem;
+  width: 10rem;
+  border-radius: 2rem;
+}
+.random-info .random-images .random-image p {
+  margin-top: 0.5rem;
 }
 
-.quote {
-  height: 40vh;
+.quote-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 45vh;
   background-color: #e5e7eb;
+  padding: 0 6.5rem;
+}
+.quote-section .quote {
+  font-size: 2.2rem;
+  font-weight: light;
+  font-style: italic;
+  color: #1f2937;
+}
+.quote-section .quote-author {
+  align-self: flex-end;
+  font-weight: bolder;
+  font-size: 1.5rem;
 }
 
 .call-to-action {
-  height: 25vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 45vh;
 }
 
 footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   background-color: #1f2937;
+  height: 5rem;
+  color: #e5e7eb;
 }/*# sourceMappingURL=styles.css.map */
